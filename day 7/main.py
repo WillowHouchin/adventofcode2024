@@ -30,5 +30,5 @@ if __name__ == '__main__':
     data = open(src, 'r').read().replace(':', '').split('\n')
     for i in range(len(data)): data[i] = [ int(j) for j in data[i].split(' ') ]
 
-    # print(sum(check(line[0], line[1:], ('+', '*')) for line in data)) # part 1
+    print(sum(check(line[0], line[1:], ('+', '*')) for line in data)) # part 1
     print(sum(check(line[0], line[1:], ('+', '*', '||')) for line in data)) # part 2
